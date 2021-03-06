@@ -1,0 +1,54 @@
+{
+    "name": "zenia9012/inventory",
+    "description": "inventory",
+    "keywords": [
+        "zenia9012",
+        "inventory"
+    ],
+    "homepage": "https://github.com/zenia9012/inventory",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yevhenii Riabyi",
+            "email": "zenia9012@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zenia9012\\Inventory\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zenia9012\\Inventory\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zenia9012\\Inventory\\InventoryServiceProvider"
+            ],
+            "aliases": {
+                "Inventory": "Zenia9012\\Inventory\\InventoryFacade"
+            }
+        }
+    }
+}
